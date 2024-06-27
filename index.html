@@ -13,6 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         .container {
             text-align: center;
@@ -21,6 +22,7 @@
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
         h1 {
             color: #4caf50;
@@ -33,6 +35,27 @@
             color: #66bb6a;
         }
     </style>
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.4/libs/oversea/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                new CozeWebSDK.WebChatClient({
+                    config: {
+                        bot_id: '7385044912175857672',
+                    },
+                    componentProps: {
+                        title: 'Кастомный Чат',
+                        iconUrl: 'https://static.wixstatic.com/media/6a322c_3110b7af034a48318e2de0e6fd304a46~mv2.png',
+                        primaryColor: '#000000', // Основной цвет (черный)
+                        secondaryColor: '#FF0000', // Вторичный цвет (красный)
+                        welcomeMessage: 'Добро пожаловать! Как я могу вам помочь?',
+                    },
+                });
+            } catch (error) {
+                console.error('Ошибка при инициализации бота:', error);
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -40,5 +63,7 @@
         <div class="decorative-element">✿</div>
         <div class="decorative-element">❀</div>
     </div>
+    <!-- Контейнер для бота -->
+    <div id="coze-chat-container"></div>
 </body>
 </html>
