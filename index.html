@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #b2ff59; /* Приятный зеленый фон */
+            background-color: #f0f0f0; /* Светло-серый фон */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,6 +34,12 @@
             font-size: 1.5em;
             color: #66bb6a;
         }
+        #coze-chat-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
     </style>
     <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.4/libs/oversea/index.js"></script>
     <script>
@@ -45,7 +51,7 @@
                     },
                     componentProps: {
                         title: 'Кастомный Чат',
-                        iconUrl: 'https://static.wixstatic.com/media/6a322c_3110b7af034a48318e2de0e6fd304a46~mv2.png',
+                        iconUrl: 'https://cdn-icons-png.flaticon.com/512/685/685068.png', // Новая иконка
                         primaryColor: '#000000', // Основной цвет (черный)
                         secondaryColor: '#FF0000', // Вторичный цвет (красный)
                         welcomeMessage: 'Добро пожаловать! Как я могу вам помочь?',
